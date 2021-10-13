@@ -1,0 +1,24 @@
+.container-div {
+	/* display : inline-flex; */
+	width : 100%;
+}
+
+.inner-div {
+	width : 50%;
+	border : 1px solid #8080802b;
+	border-radius : 10px;
+	padding : 10px;
+	box-shadow: 4px 0px 0px -3px rgba(0, 0, 0, 0.09);
+}
+.my-iframe {
+	height : 100%;
+	width: 100%;
+}
+.CodeMirror {
+	border: 1px solid #eee;
+	height: 36rem;
+}
+
+.vf-page-box {
+	display: none;
+}

@@ -1,0 +1,53 @@
+<template>
+	<lightning-card variant="Narrow" title="Converter" icon-name="standard:product_transfer">
+		<lightning-tabset>
+			<lightning-tab label="Excel To Json">
+				<div class="slds-p-around_medium">
+					<lightning-input type="file" accept=".xls, .xlsx" label="Attachment" onchange={handleFileChange}>
+					</lightning-input>
+					<div class="container-div slds-m-top_medium">
+						<textarea class="editor" style="height:900px" rows="20" cols="50" lwc:dom="manual"></textarea></br>
+					</div>
+				</div>
+			</lightning-tab>
+			<lightning-tab label="Json To Excel">
+				<lightning-layout multiple-rows>
+					<lightning-layout-item size="12" padding="around-small" small-device-size="12"
+						medium-device-size="12" large-device-size="12">
+						<div class="slds-float_right">
+							<lightning-button class="slds-m-right_medium" variant="brand" label="Download Excel"
+								title="Download Excel" onclick={download}></lightning-button>
+							<lightning-button variant="brand" label="Download Formatted Excel"
+								title="Download Formatted Excel" onclick={downloadFormattedExcel}></lightning-button>
+						</div>
+					</lightning-layout-item>
+					<lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6"
+						large-device-size="6">
+						<div class="custom-box">
+							<div class="slds-text-heading_large slds-text-align_center slds-m-bottom_medium">
+								Contacts
+							</div>
+							<lightning-datatable key-field="id" data={contactData} show-row-number-column
+								hide-checkbox-column columns={contactDataTableColumns}>
+							</lightning-datatable>
+						</div>
+					</lightning-layout-item>
+					<lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6"
+						large-device-size="6">
+						<div class="custom-box">
+							<div class="slds-text-heading_large slds-text-align_center slds-m-bottom_medium">
+								Accounts
+							</div>
+							<lightning-datatable key-field="id" data={accountData} show-row-number-column
+								hide-checkbox-column columns={accountDataTableColumns}>
+							</lightning-datatable>
+						</div>
+					</lightning-layout-item>
+				</lightning-layout>
+			</lightning-tab>
+		</lightning-tabset>
+		<div class="vf-page-box">
+			<iframe src={siteURL} height="100px" width="150px"></iframe>
+		</div>
+	</lightning-card>
+</template>
