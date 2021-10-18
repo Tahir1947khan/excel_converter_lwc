@@ -3,6 +3,9 @@ For this conversion, we use third party JavaScript (Sheet JavaScript) in lwc. By
 
 we can use the ```Sheet js``` for conversation and ```codemirror js``` for show the converted json in code block. we are using the ```apex controller (ExcelController)``` for fetching the ```Accounts``` and ```Contacts``` Records. we do not download the formatted excel in lwc so we using the ```visual force page (jsonToExcelParserPage)```.
 
+![Animation](https://user-images.githubusercontent.com/72434195/137688626-573d1feb-580a-4f4a-a803-94622408c900.gif)
+
+
  <h2>Parsing functions</h2>
 
 * ```XLSX.read(data, read_opts)``` attempts to parse data.
@@ -125,4 +128,6 @@ Cell styles are specified by a style object that roughly parallels the OpenXML s
 | 				   | right			 | { style: BORDER_STYLE, color: COLOR_SPEC } 												   |
 | 				   | diagonal		 | { style: BORDER_STYLE, color: COLOR_SPEC } 												   |
 | 				   | diagonalUp		 | true or false 																			   |
-| 				   | diagonalDown	 | true or false 																			   |
+| 				   | diagonalDown	 | true or false 																	|
+
+
