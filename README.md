@@ -1,5 +1,7 @@
 This component converts excel file to json and json to excel.
-For this conversion, we use third party JavaScript (Sheet JavaScript) in lwc. By using this javascript method we can easily read excel and convert it.
+For this conversion, we use third party JavaScript (Sheet JavaScript) in lwc. By using this javascript method we can easily read excel and convert it. 
+
+we can use the ```Sheet js``` for conversation and ```codemirror js``` for show the converted json in code block. we are using the ```apex controller (ExcelController)``` for fetching the ```Accounts``` and ```Contacts``` Records. we do not download the formatted excel in lwc so we using the ```visual force page (jsonToExcelParserPage)```.
 
  <h2>Parsing functions</h2>
 
